@@ -5,7 +5,7 @@ def nyc_pigeon_organizer(data)
   
   data.each do |key, value|
     value.each do |k, v|
-      value.each do |names|
+      v.each do |name|
         binding.pry
         pigeons[item] = {}
         pigeons[item][:color] = []
