@@ -13,6 +13,7 @@ def nyc_pigeon_organizer(data)
         if !pigeons[name][key]
           pigeons[name][key] = []
         end
+        pigeons[name][key] << k  
       end
     end
   end
