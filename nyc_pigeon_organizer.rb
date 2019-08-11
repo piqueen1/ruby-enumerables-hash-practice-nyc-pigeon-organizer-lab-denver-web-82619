@@ -4,11 +4,15 @@ def nyc_pigeon_organizer(data)
   pigeons = {}
   
   data.each do |key, value|
-    pigeons[key] = value
+    value.each do |key, value|
+      value.each do |key, value|
+        pigeons[key] = {}
+      end
+    end
   end
   
   pigeons
-  #binding.pry
+  binding.pry
 end
 
 =begin
