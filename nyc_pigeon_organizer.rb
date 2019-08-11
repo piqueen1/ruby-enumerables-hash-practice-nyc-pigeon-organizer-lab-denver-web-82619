@@ -1,37 +1,20 @@
-require "pry"
-
 def nyc_pigeon_organizer(data)
   pigeons = {}
   
   data.each do |key, value|
     value.each do |k, v|
-      value.each do |names|
-        binding.pry
-        pigeons[item] = {}
-        pigeons[item][:color] = []
-        pigeons[item][:gender] = []
-        pigeons[item][:lives] = []
+      v.each do |name|
+        if !pigeons[name]
+          pigeons[name] = {}
+        end
+        if !pigeons[name][key]
+          pigeons[name][key] = []
+        end
+        pigeons[name][key] << k.to_s
       end
     end
   end
   
   pigeons
-  #binding.pry
 end
-
-=begin
-pigeons => {:color=>
-  {:purple=>["Theo", "Peter Jr.", "Lucky"],
-   :grey=>["Theo", "Peter Jr.", "Ms. K"],
-   :white=>["Queenie", "Andrew", "Ms. K", "Alex"],
-   :brown=>["Queenie", "Alex"]},
- :gender=>
-  {:male=>["Alex", "Theo", "Peter Jr.", "Andrew", "Lucky"],
-   :female=>["Queenie", "Ms. K"]},
- :lives=>
-  {"Subway"=>["Theo", "Queenie"],
-   "Central Park"=>["Alex", "Ms. K", "Lucky"],
-   "Library"=>["Peter Jr."],
-   "City Hall"=>["Andrew"]}}
-=end
    
