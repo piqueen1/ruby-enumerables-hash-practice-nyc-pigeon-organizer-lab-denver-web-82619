@@ -7,7 +7,9 @@ def nyc_pigeon_organizer(data)
     value.each do |k, v|
       v.each do |name|
         binding.pry
-        pigeons[item] = {}
+        if !pigeons[name]
+          pigeons[name] = {}
+        end
         pigeons[item][:color] = []
         pigeons[item][:gender] = []
         pigeons[item][:lives] = []
