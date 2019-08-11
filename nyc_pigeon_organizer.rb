@@ -10,9 +10,9 @@ def nyc_pigeon_organizer(data)
         if !pigeons[name]
           pigeons[name] = {}
         end
-        pigeons[item][:color] = []
-        pigeons[item][:gender] = []
-        pigeons[item][:lives] = []
+        if !pigeons[name][key]
+          pigeons[name][key] = []
+        end
       end
     end
   end
